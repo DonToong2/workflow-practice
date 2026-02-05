@@ -1,2 +1,3 @@
+<<<<<<< HEAD
 # workflow-practice
- + second
++ second
