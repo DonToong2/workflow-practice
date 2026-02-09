@@ -10,8 +10,9 @@ class Adventurer {
     static int totalCount = 0; // 현재 생성된 모험가의 수
 
     // 생성자
-    public Adventurer() {
+    public Adventurer(String adventurerName) {
         totalCount++; // 생성자가 호출될 때마다 값을 누적
+        System.out.println("모험가 " + adventurerName + "이(가) 생성되었습니다");
     }
 
     // 메서드 오버로딩 -> 이름은 같지만 매개변수가 다름 (공격) 2가지 패턴
@@ -43,8 +44,8 @@ public class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
         // 객체 생성 (생성자 호출 시 static 변수 증가)
-        Adventurer Warrior = new Adventurer();
-        Adventurer Magician = new Adventurer();
+        Adventurer Warrior = new Adventurer("마법사");
+        Adventurer Magician = new Adventurer("전사");
 
         // 메서드 오버로딩 테스트
         String weapon = "";
