@@ -54,7 +54,7 @@ class Customer {
     void buyCoffee(Coffee coffee) {
         if(money < coffee.price) {
             System.out.println("잔액이 부족합니다");
-            return;
+            return; // 후에 금액 계산과 커피 구매X
         }
         else {
             System.out.println();

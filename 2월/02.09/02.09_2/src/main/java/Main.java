@@ -45,7 +45,7 @@ public class Main {
 
         // 상속받은 자식 객체 생성
         SmartPhone myPhone = new SmartPhone("Galaxy S24", battery, "Android");
-        
+
         // Object 클래스의 toString() 오버라이딩 확인
         // System.out.println(myPhone.toString()); 과 동일
         System.out.println(myPhone);
