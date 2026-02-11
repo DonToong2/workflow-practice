@@ -5,7 +5,7 @@ public class BankSystemTest {
         int amount = 50000;
 
         try {
-            // 안전한 조회 (DB코드 -> Enum)
+            // 안전한 조회 (DB코드 -> Enum)f
             TransactionType type = TransactionType.fromCode(dbCode);
             System.out.println("거래 종류 : " + type.getDesc());
 
