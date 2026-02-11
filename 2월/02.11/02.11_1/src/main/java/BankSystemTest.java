@@ -1,7 +1,7 @@
 public class BankSystemTest {
     public static void main(String[] args) {
         // 가정 : DB에서 "W"(출금)라는 코드가 넘어옴
-        String dbCode = "T";
+        String dbCode = "W";
         int amount = 50000;
 
         try {
