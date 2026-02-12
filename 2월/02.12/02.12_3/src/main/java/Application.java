@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,7 +15,7 @@ public class Application {
         List<String> result = products.stream()
                 .filter(product -> product.getPrice() >= 20000) // 필터링, 조건
                 .map(product -> product.getName())
-                .toList();
+                .collect(Collectors.toList());
         System.out.println(result);
 
     }

@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Application {
         List<String> result = students.stream()
                 .filter(student -> student.getScore() >= 80) // 조건으로 필터링을 하고
                 .map(student -> student.getName().toUpperCase()) // 매핑한다, 바꾸기
-                .toList();
+                .collect(Collectors.toList());
         System.out.println((result));
     }
 }
