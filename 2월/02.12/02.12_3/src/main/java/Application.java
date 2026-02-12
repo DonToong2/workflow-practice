@@ -12,11 +12,21 @@ public class Application {
         );
 
         // Stream을 사용해 필터링 + 변환 + 수집 작업 수행
-        List<String> result = products.stream()
+
+        // 추출
+        products.stream()
                 .filter(product -> product.getPrice() >= 20000) // 필터링, 조건
-                .map(product -> product.getName())
+                .map(Product::getName)
+                .forEach(System.out::println);
+
+        System.out.println("======================");
+
+        // 리스트로 저장하여 출력
+        List<String> filteredResult = products.stream()
+                .filter(product -> product.getPrice() >= 20000) // 필터링, 조건
+                .map(Product::getName)
                 .collect(Collectors.toList());
-        System.out.println(result);
+        System.out.println(filteredResult);
 
     }
 }

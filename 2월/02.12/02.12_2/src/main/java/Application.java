@@ -13,10 +13,19 @@ public class Application {
         );
         
         // 여기서부터 Stream을 사용해 데이터를 처리
-        List<String> result = students.stream()
+        // 추출
+        students.stream()
+                .filter(student -> student.getScore() >= 80) // 조건으로 필터링을 하고
+                .map(student -> student.getName().toUpperCase()) // 매핑한다, 바꾸기
+                .forEach(System.out::println);
+
+        System.out.println("======================");
+
+        // 리스트로 저장하여 결과 수집
+        List<String> filteredResult = students.stream()
                 .filter(student -> student.getScore() >= 80) // 조건으로 필터링을 하고
                 .map(student -> student.getName().toUpperCase()) // 매핑한다, 바꾸기
                 .collect(Collectors.toList());
-        System.out.println((result));
+        System.out.println((filteredResult));
     }
 }
